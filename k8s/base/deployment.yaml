@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-backtest-meanreversion
+  labels:
+    app: stock-backtest-meanreversion
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stock-backtest-meanreversion
+  template:
+    metadata:
+      labels:
+        app: stock-backtest-meanreversion
+    spec:
+      containers:
+      - name: stock-backtest-meanreversion
+        image: stock-backtest-meanreversion:latest
+        ports:
+        - containerPort: 8080

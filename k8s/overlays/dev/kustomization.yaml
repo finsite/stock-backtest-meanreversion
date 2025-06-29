@@ -1,0 +1,18 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base/
+
+namespace: default
+
+labels:
+  - includeSelectors: true
+    pairs:
+      app: stock-backtest-meanreversion
+
+images:
+  - name: stock-backtest-meanreversion
+    newName: stock-backtest-meanreversion
+    newTag: latest
