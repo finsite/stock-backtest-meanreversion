@@ -4,4 +4,4 @@ name: stock-backtest-meanreversion
 description: A Helm chart for stock-backtest-meanreversion
 type: application
 version: 0.1.0
-appVersion: "1.0"
+appVersion: '1.0'
